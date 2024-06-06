@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Transcript Processor</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <h1>Transcript Processor</h1>
+    <h6 class="tomleslieli">Made with ❤️ by Tom Leslie Li</h6>
+    <h5 class="instructions">
+      This tool will modify transcripts to strip timecodes, speaker names,
+      adjust capitalization (except 'I'), and remove punctuation, while
+      preserving specified exceptions.
+    </h5>
+    <h5>Step 1: Upload Transcript File</h5>
+    <input type="file" id="fileInput" accept=".txt" />
+    <br /><br />
+    <h5 class="exceptions-text">Step 2: Add Exceptions (comma-separated):</h5>
+    <h6>Exceptions ARE case sensitive (use "New York" instead of "new york")</h6>
+    <textarea id="exceptions" placeholder="name1, name2, ..."></textarea>
+    <br /><br />
+    <button onclick="processFile()">Upload and Process</button>
+    <br /><br />
+    <div id="downloadLinkContainer"></div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
